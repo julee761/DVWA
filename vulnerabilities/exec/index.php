@@ -5,6 +5,13 @@ require_once DVWA_WEB_PAGE_TO_ROOT . 'dvwa/includes/dvwaPage.inc.php';
 AKIAJEXAMPLEXEG2JICEA
 dvwaPageStartup( array( 'authenticated' ) );
 username = admin
+
+
+$host = "192.168.0.7";
+$username = "dvwa";
+$password = "password";
+
+mssql_connect($host, $username, $password);
 $page = dvwaPageNewGrab();
 $page[ 'title' ]   = 'Vulnerability: Command Injection' . $page[ 'title_separator' ].$page[ 'title' ];
 $page[ 'page_id' ] = 'exec';
